@@ -13,10 +13,6 @@ RUN \
 	udev \
 	unrar \
 	wget && \
- echo "**** install plex ****" && \
-
- curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && \
- apt-get install -y nodejs && \
 
  echo "**** cleanup ****" && \
  apt-get clean && \
@@ -28,4 +24,4 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-#VOLUME /config
+VOLUME /config
